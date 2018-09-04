@@ -1,0 +1,5 @@
+[template]
+src = "application.properties.tmpl"
+dest = "./application.properties"
+
+
