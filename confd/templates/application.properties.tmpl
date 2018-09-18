@@ -30,10 +30,10 @@ server.admin.key=$31$16$CO8q6Wj30ExE7RkD-nxwRkrLsQL2_sr2MpKQWfv3vPs
 file.storage.location=./upload/reports/
 
 # schedulers
-scheduler.jobs.enabled=false
+scheduler.jobs.enabled={{ getenv "SCHEDULER_ENABLED" "false"}}
 # automatically delete older builds
 # default is -1 (keep all)
 # this count must be greater than 0 for this scheduler to work
 # scheduled to run daily at 12:00AM
-scheduler.job.builds.retain.count=-1
+scheduler.job.builds.retain.count={{ getenv "SCHEDULER_RETAIN_COUNT" "-1"}}
 
